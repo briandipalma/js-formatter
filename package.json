@@ -1,0 +1,22 @@
+{
+  "name": "js-formatter",
+  "version": "1.0.0",
+  "description": "JS formatter",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/briandipalma/js-formatter.git"
+  },
+  "keywords": [
+    "formatter"
+  ],
+  "author": "Brian Di Palma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/briandipalma/js-formatter/issues"
+  },
+  "homepage": "https://github.com/briandipalma/js-formatter"
+}
