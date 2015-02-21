@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/briandipalma/js-formatter/issues"
   },
-  "homepage": "https://github.com/briandipalma/js-formatter"
+  "homepage": "https://github.com/briandipalma/js-formatter",
+  "dependencies": {
+    "babel": "^4.4.3"
+  }
 }
