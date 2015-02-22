@@ -20,7 +20,8 @@
   },
   "homepage": "https://github.com/briandipalma/js-formatter",
   "dependencies": {
-    "babel": "^4.4.3"
+    "babel": "^4.4.3",
+    "esformatter": "^0.4.3"
   },
   "devDependencies": {
     "mocha": "^2.1.0"
