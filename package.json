@@ -22,6 +22,13 @@
   "dependencies": {
     "babel": "^4.4.3",
     "esformatter": "^0.4.3",
+    "esformatter-dot-notation": "^1.1.0",
+    "esformatter-eol-last": "^1.0.0",
+    "esformatter-quote-props": "^1.0.0",
+    "esformatter-quotes": "^1.0.0",
+    "esformatter-semicolons": "^1.0.3",
+    "esformatter-spaced-lined-comment": "^1.0.0",
+    "esformatter-use-strict": "^2.0.0",
     "winston": "^0.9.0"
   },
   "devDependencies": {
