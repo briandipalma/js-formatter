@@ -6,6 +6,7 @@
   "scripts": {
     "test": "mocha --compilers js:babel/register"
   },
+  "bin": "./bin/js-formatter-cli.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/briandipalma/js-formatter.git"
