@@ -1,3 +1,8 @@
+import {
+	writeFile,
+	readFileSync
+} from 'fs';
+
 import {sync} from 'glob';
 import {format} from 'esformatter';
 import {error as logError} from 'winston';
@@ -13,7 +18,18 @@ import defaultConfig from '../esformatter.json';
 export function processFiles(optionsObject) {
 	const filesToFormat = optionsObject.t ? 'tests/**/*.js' : 'src/**/*.js';
 
-	sync(filesToFormat).forEach()
+	sync(filesToFormat)
+		.map(fileName => ({
+			fileName,
+			contents: readFileSync(fileName, {encoding: 'utf8'})
+		}))
+		.map(({fileName, contents}) => ({
+			fileName,
+			contents: defaultFormatCode(contents)
+		}))
+		.map(({fileName, contents}) => {
+			writeFile(fileName, contents);
+		});
 }
 
 /**
