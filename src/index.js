@@ -1,7 +1,20 @@
-import winston from 'winston';
+import {sync} from 'glob';
 import {format} from 'esformatter';
+import {error as logError} from 'winston';
 
 import defaultConfig from '../esformatter.json';
+
+/**
+ * Format all *.js files within a directory (either src or test). The options object controls
+ * which directory is formatted.
+ *
+ * @param {Object} optionsObject - Options to configure file formatting.
+ */
+export function processFiles(optionsObject) {
+	const filesToFormat = optionsObject.t ? 'tests/**/*.js' : 'src/**/*.js';
+
+	sync(filesToFormat).forEach()
+}
 
 /**
  * Format code based on the default configuration.
@@ -26,9 +39,9 @@ export function formatCode(codeToFormat, formatterOptions) {
 	try {
 		return format(codeToFormat, formatterOptions);
 	} catch (error) {
-		winston.error(codeToFormat);
-		winston.error(error);
-		winston.error('Error formatting source code, skipping formatting.');
+		logError(codeToFormat);
+		logError(error);
+		logError('Error formatting source code, skipping formatting.');
 	}
 
 	return codeToFormat;
