@@ -7,6 +7,7 @@
 		"esformatter-use-strict",
 		"esformatter-quote-props",
 		"esformatter-dot-notation",
+		"esformatter-module-exports",
 		"esformatter-spaced-lined-comment"
 	],
 	"quotes": {
