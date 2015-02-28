@@ -51,9 +51,13 @@ function processFiles(optionsObject) {
 
     writeFile(fileName, formattedCode);
   });
-}function defaultFormatCode(codeToFormat) {
+}
+
+function defaultFormatCode(codeToFormat) {
   return formatCode(codeToFormat, defaultConfig);
-}function formatCode(codeToFormat, formatterOptions) {
+}
+
+function formatCode(codeToFormat, formatterOptions) {
   try {
     return format(codeToFormat, formatterOptions);
   } catch (error) {
@@ -64,6 +68,7 @@ function processFiles(optionsObject) {
 
   return codeToFormat;
 }
+
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
