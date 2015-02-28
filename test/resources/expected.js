@@ -25,3 +25,5 @@ ApplicationMenu.prototype.aMethod = function() {
 
 	var textInput = ElementUtility.getElementsByClassName(container, 'input', 'rename-input')[0];
 };
+
+module.exports = ApplicationMenu;
