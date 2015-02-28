@@ -2,7 +2,7 @@
   "name": "js-formatter",
   "version": "1.0.0",
   "description": "JS formatter",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "babel src --out-dir dist",
     "test": "mocha --compilers js:babel/register"
