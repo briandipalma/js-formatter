@@ -23,7 +23,7 @@
   "homepage": "https://github.com/briandipalma/js-formatter",
   "dependencies": {
     "babel": "^4.4.3",
-    "esformatter": "^0.4.3",
+    "esformatter": "^0.5.0",
     "esformatter-dot-notation": "^1.1.0",
     "esformatter-eol-last": "^1.0.0",
     "esformatter-module-exports": "^1.0.0",
