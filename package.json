@@ -30,7 +30,7 @@
     "esformatter-quote-props": "^1.0.0",
     "esformatter-quotes": "^1.0.0",
     "esformatter-semicolons": "^1.0.3",
-    "esformatter-spaced-lined-comment": "^1.0.0",
+    "esformatter-spaced-lined-comment": "^2.0.1",
     "esformatter-use-strict": "^2.0.0",
     "glob": "^4.4.0",
     "winston": "^0.9.0",
