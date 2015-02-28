@@ -43,39 +43,27 @@ var logError = require("winston").error;
 var defaultConfig = _interopRequire(require("../esformatter.json"));
 
 function processFiles(optionsObject) {
-	var filesToFormat = optionsObject.t ? "tests/**/*.js" : "src/**/*.js";
+  var filesToFormat = optionsObject.t ? "tests/**/*.js" : "src/**/*.js";
 
-	sync(filesToFormat).map(function (fileName) {
-		return {
-			fileName: fileName,
-			contents: readFileSync(fileName, { encoding: "utf8" })
-		};
-	}).map(function (_ref) {
-		var fileName = _ref.fileName;
-		var contents = _ref.contents;
-		return {
-			fileName: fileName,
-			contents: defaultFormatCode(contents)
-		};
-	}).map(function (_ref) {
-		var fileName = _ref.fileName;
-		var contents = _ref.contents;
+  sync(filesToFormat).forEach(function (fileName) {
+    var contents = readFileSync(fileName, { encoding: "utf8" });
+    var formattedCode = defaultFormatCode(contents);
 
-		writeFile(fileName, contents);
-	});
+    writeFile(fileName, formattedCode);
+  });
 }function defaultFormatCode(codeToFormat) {
-	return formatCode(codeToFormat, defaultConfig);
+  return formatCode(codeToFormat, defaultConfig);
 }function formatCode(codeToFormat, formatterOptions) {
-	try {
-		return format(codeToFormat, formatterOptions);
-	} catch (error) {
-		logError(codeToFormat);
-		logError(error);
-		logError("Error formatting source code, skipping formatting.");
-	}
+  try {
+    return format(codeToFormat, formatterOptions);
+  } catch (error) {
+    logError(codeToFormat);
+    logError(error);
+    logError("Error formatting source code, skipping formatting.");
+  }
 
-	return codeToFormat;
+  return codeToFormat;
 }
 Object.defineProperty(exports, "__esModule", {
-	value: true
+  value: true
 });

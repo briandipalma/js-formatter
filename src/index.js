@@ -19,16 +19,11 @@ export function processFiles(optionsObject) {
 	const filesToFormat = optionsObject.t ? 'tests/**/*.js' : 'src/**/*.js';
 
 	sync(filesToFormat)
-		.map(fileName => ({
-			fileName,
-			contents: readFileSync(fileName, {encoding: 'utf8'})
-		}))
-		.map(({fileName, contents}) => ({
-			fileName,
-			contents: defaultFormatCode(contents)
-		}))
-		.map(({fileName, contents}) => {
-			writeFile(fileName, contents);
+		.forEach(fileName => {
+			const contents = readFileSync(fileName, {encoding: 'utf8'});
+			const formattedCode = defaultFormatCode(contents);
+
+			writeFile(fileName, formattedCode);
 		});
 }
 
