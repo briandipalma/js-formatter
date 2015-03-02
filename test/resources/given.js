@@ -16,6 +16,20 @@ ApplicationMenu.prototype.method = function(){
 	})
 }
 
+ApplicationMenu.prototype.more = function() {
+	if (transition) {
+		for (var i = 1, length = menuItems.children.length; i < length; ++i) {
+			menuItems.children[i].firstChild.className = itemStyle;
+		}
+	} else {
+		itemStyle += ' no-transition';
+		for (i = 1, length = menuItems.children.length; i < length; ++i) {
+			menuItems.children[i].firstChild.className = itemStyle;
+		}
+
+	}
+}
+
 ApplicationMenu.prototype.aMethod = function() {
 	for (var i = 0; i < editIcons.children.length; ++i) {
   editIcons.children[i].style.display = 'none';
