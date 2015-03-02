@@ -24,7 +24,8 @@
 			"FunctionDeclarationClosingBrace": 1,
 			"FunctionExpressionClosingBrace": 1,
 			"IfStatementClosingBrace": 1,
-			"TryClosingBrace": 1
+			"TryClosingBrace": 1,
+			"ElseStatementClosingBrace": 1
 		},
 		"after": {
 			"CatchOpeningBrace": 1,
