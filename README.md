@@ -8,8 +8,9 @@
 This repository hosts a wrapper around [esformatter](https://github.com/millermedeiros/esformatter/) that formats JS
 code to follow the [Caplin style guide](https://github.com/caplin/StyleGuide). As esformatter can be used stand alone
 with configuration it's generally not required to wrap it. The reason it's wrapped is for convenience as this package
-depends on a set of required esformatter plugins. It also hosts the style guide esformatter configuration. This package
-can be used stand alone from the command line or as a required library.
+depends on a set of required esformatter plugins. It also hosts the style guide esformatter configuration. So
+installing it will deal with plugins and configuration. This package can be used stand alone from the command line or
+as a required library.
 
 ### Mechanics
 
