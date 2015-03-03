@@ -13,9 +13,28 @@ can be used stand alone from the command line or as a required library.
 
 ### Mechanics
 
-.
+To use as a stand alone CLI tool install it with the command.
+
+```bash
+$ npm i -g briandipalma/js-formatter
+```
+
+Once installed `cd` into a directory with a `src` subdirectory and run.
+
+```bash
+$ js-formatter
+```
+
+This will format all `*.js` files in the `src` directory.
+
+```bash
+$ js-formatter -t
+```
+
+Will format the `tests` directory.
 
 ### Testing
 
-
--t will format the tests directory.
+```bash
+$ npm t
+```
