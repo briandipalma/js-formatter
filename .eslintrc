@@ -1,5 +1,9 @@
 {
+	"ecmaFeatures": {
+		"modules": true
+	},
 	"env": {
+		"es6": true,
 		"node": true,
 		"browser": true
 	},
@@ -34,6 +38,7 @@
 		"space-in-parens": [2, "never"],
 		"spaced-line-comment": [2, "always", {exceptions:["-","+","*"]}],
 		"max-len": [2, 120, 4],
-		"indent": [2, "tab", {indentSwitchCase: true}]
+		"indent": [2, "tab", {indentSwitchCase: true}],
+		"space-before-function-parentheses": [2, "never"]
 	}
 }
