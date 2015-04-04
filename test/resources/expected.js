@@ -10,6 +10,9 @@ function ApplicationMenu() {
 }
 
 ApplicationMenu.prototype.method = function() {
+	throw new caplin.core.Error(
+		caplin.core.Error.INVALID_PARAMETERS, 'AttributesNormalizer argument must be a map object'
+	);
 	var oXmlResourceService = require('service!br.xml-service');
 	this._serviceContainer[serviceName].containers.forEach(function(container) {
 		var menuItem = ElementUtility.getElementsByClassName(container, 'ul', 'menu-items')[0];
